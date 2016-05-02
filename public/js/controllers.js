@@ -11,7 +11,8 @@ console.log('pokedex:', pokedex);
 $scope.pokedex = pokedex.data.pokemon_entries;
 });
 
-app.controller('detailCtrl', function(pokemon){
+app.controller('detailCtrl', function($scope, $interval, pokemon){
   console.log('detailCtrl');
   console.log('pokemon:', pokemon);
+  $scope.pokemon = pokemon.data;
 })
